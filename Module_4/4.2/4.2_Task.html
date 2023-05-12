@@ -1,0 +1,146 @@
+<!-- A navbar that uses four Bootstrap icons as its elements, one of these elements should run the toast notification.
+A carousel with two images and controls.
+A button group of three buttons with different colours. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- Link js and jquery -->
+    <script src="../jquery-3.6.4.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <title>Mod 4.1 - The task</title>
+    <!-- Toast jquery code  -->
+    <script>
+      $(document).ready(function () {
+        $("#toastBtn").click(function () {
+          $("#liveToast").toast("show");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- Navbar activity  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="bi bi-compass"></i></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle
+ navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><i class="bi bi-house"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-airplane"></i></a>
+            </li>
+            <!-- Toast button  -->
+            <li type="button" class="nav-item" id="toastBtn">
+              <!-- sets position of toast -->
+              <div
+                class="position-fixed bottom-0 end-0 p-3"
+                style="z-index: 11"
+              >
+                <div
+                  id="liveToast"
+                  class="toast hide"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                >
+                  <div class="toast-header">
+                    <strong class="me-auto">Fact:</strong>
+                    <small>Now and always</small>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="toast"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="toast-body">Toast is just burned bread.</div>
+                </div>
+              </div>
+              <a class="nav-link" href="#"><i class="bi bi-binoculars"></i> </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Carousel activity -->
+    <div
+      id="sweetCarousel"
+      class="container p-4 carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active carousel-dark">
+          <img
+            class="d-block w-100"
+            src="https://www.mestergronn.no/on/demandware.static/-/Sites-product-catalog/no_NO/v1683621578981//mg-product-images/158437/158437_1.jpg"
+            alt="Monstera"
+          />
+          <div class="carousel-caption">
+            <h2>Monstera</h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="https://www.mestergronn.no/on/demandware.static/-/Sites-product-catalog/no_NO/v1683621578981//mg-product-images/168667/168667_1.jpg"
+            alt="Yucca Palm"
+          />
+          <div class="carousel-caption">
+            <h2>Yucca Palm</h2>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev btn-sm carousel-dark btn-success"
+        type="button"
+        data-bs-target="#sweetCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next btn-sm carousel-dark"
+        type="button"
+        data-bs-target="#sweetCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Button activity  -->
+    <div class="btn-group" role="group" aria-label="Basic">
+        <button type="button" class="btn btn-primary btn-sm">Button 1</button>
+        <button type="button" class="btn btn-secondary">Button 2</button>
+        <button type="button" class="btn btn-danger btn-lg">Button 3</button>
+    </div>
+  </body>
+</html>
