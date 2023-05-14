@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../Module_4/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <script src="../Module_4/js/bootstrap.bundle.min.js"></script>
+    <script src="../Module_4/jquery-3.6.4.js"></script>
+    <title>4.5 Tasks</title>
+  </head>
+  <body>
+    <h1 class="display-3">My Heading</h1>
+
+    <table class="table table-hover">
+      <tr class="table-success">
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr class="table-danger">
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr class="table-primary">
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </table>
+
+    <div class="container p-3">
+      <button type="button" class="btn-outline-danger">Button 1</button>
+      <button type="button" class="btn-sm btn-success" disabled>
+        Button 2
+      </button>
+      <a
+        href="https://google.com"
+        class="btn-warning btn-lg"
+        role="button"
+        data-bs-toggle="button"
+        >Link Button</a
+      >
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">First item</li>
+      <li class="list-group-item">Second item</li>
+      <li class="list-group-item">Third item</li>
+    </ul>
+
+    <div class="dropdown">
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="https://google.com">Item 1</a></li>
+        <li><a class="dropdown-item" href="https://google.com">Item 2</a></li>
+        <li><a class="dropdown-item" href="https://google.com">Item 3</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item" href="https://google.com">Item 4</a></li>
+      </ul>
+    </div>
+
+    <!-- Create a standard carousel -->
+
+    <div
+      id="carouselControls"
+      class="container p-5 carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://cdn.pixabay.com/photo/2022/07/07/11/15/rainbow-7307023__340.png"
+            alt="Rainbow"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://cdn.pixabay.com/photo/2022/03/30/13/16/betta-7101167__340.jpg"
+            alt="Fighting Fish"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev btn-sm"
+        type="button"
+        data-bs-target="#carouselControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next btn-sm"
+        type="button"
+        data-bs-target="#carouselControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- create grid with 4 cells. higher than M show 4, higher than S show 2 (cols) -->
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="bg-warning col">Column</div>
+        <div class="bg-primary col">Column</div>
+        <div class="bg-danger col">Column</div>
+        <div class="bg-success col">Column</div>
+      </div>
+    </div>
+    <br />
+
+    <!-- Toast button  -->
+
+    <script>
+      $(document).ready(function () {
+        $("#toastBtn").click(function () {
+          $("#toast").toast("show");
+        });
+      });
+    </script>
+    <button type="button" class="btn btn-danger" id="toastBtn">
+      Toast Button
+    </button>
+    <div class="position-relative" style="z-index: 11">
+      <div
+        id="toast"
+        class="toast hide"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <strong class="me-auto">bootstrap</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+          <div class="toast-body">This is a toast message</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create the figure containing the betta image with thumbnails and caption on the bottom left. 
+    Make the figure resize with the change of screen size. -->
+
+    <figure class="figure">
+      <img class="figure-img img-fluid img-thumbnail" src="https://cdn.pixabay.com/photo/2022/03/30/13/16/betta-7101167__340.jpg" alt="betta">
+      <figcaption class="figure-caption">Fighting Fish!</figcaption>
+    </figure>
+  </body>
+</html>
